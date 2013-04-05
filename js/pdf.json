@@ -1,0 +1,126 @@
+{
+    "head" : "Platform Symphony",
+    "subhead" : "Total Cost of Ownership Calculator",
+    "section" : [
+        {
+            "head" : "Welcome to the Platform Symphony Cost Savings Estimate Tool",
+            "paragraphs" : [
+                "This tool offers a 3-year total cost of ownership (TCO) view of your distributed grid computing environment and savings that you could potentially experience by using IBM Platform Symphony in place of a competing grid manager.",
+                "This model can estimate savings for both compute-intensive applications as well as data-intensive grid applications built on Hadoop MapReduce. The use of this simple tool does not substitute for detailed analysis. To have IBM perform a business value assessment for your environment, and provide a more accurate estimate of potential savings, please contact your IBM representative.",
+                "In today's economic climate, organizations need to reduce operating costs where possible. The Platform Symphony Cost Savings Estimate Tool is designed to help approximate the potential savings that can be realized by using IBM Platform Symphony.",
+                "IBM Platform Symphony has been used in investment banking and other industries for over a decade to help organizations deliver higher levels of grid performance. A low-latency scheduler with sophisticated resource sharing features help deliver high levels of infrastructure efficiency on a common, shared architecture that is less costly to deploy and manage.",
+                "For many customers, IBM Platform Symphony is a game changer. Not only does it enable clients to run a variety of workloads faster on less hardware, but it provides advantages to the business as well.",
+                "You can return to this tool any time to run different scenarios and refine estimates. This report also provides links to resources to help you learn more about IBM Platform Symphony and how it can reduce costs associated with your grid deployment."
+            ]
+        },
+        {
+            "head" : "Summary of Your Inputs",
+            "tables" : {
+                "calculator" : {
+                    
+                }
+            }
+        },
+        {
+            "head" : "Model Results",
+            "paragraphs" : [
+                "Based on these assumptions, an estimated total cost for infrastructure and administration is shown in Table 1.  This table assumes the use of a standard, workload manager that does not offer Platform Symphony's performance and resource sharing advantages.",
+                "Table two shows projected costs assuming that the same project is undertaken using IBM Platform Symphony. Symphony provides multiple opportunities for cost reduction.",
+                "Based on your inputs and various assumptions in the model, IBM Platform Symphony can save [value] over three years.",
+                "Table three shows the cumulative amounts that might be saved by deploying Platform Symphony."
+            ],
+            "tables" : {
+                "table1" : {
+                
+                },
+                "table2" : {
+                
+                },
+                "table3" : {
+                
+                }
+            }
+        },
+        {
+            "head" : "Sources of Savings",
+            "section" : [
+                {
+                    "head" : "Cost of Infrastructure",
+                    "paragraphs" : [
+                        "Platform Symphony is simply faster and more efficient. Because of this, you can meet application demands with less infrastructure. Based on the number of applications you are running, the mix of applications with short and long-running tasks, and the assumed efficiency gains for each, instead of deploying 1,000 nodes, with Symphony you can meet your application performance requirements with just 820 nodes. This results in an associated reduction in hardware costs based on your 3 year depreciation policy.",
+                        "These savings will likely improve as time goes by. Because of Symphony's flexible sharing capabilities, you can often deploy new applications without the need for additional infrastructure. While a [value] growth rate is projected, you can likely grow the cluster at a slower rate year over year while still accommodating new demands.",
+                        "There is an obvious opportunity for savings not taken into account in this model. Normally Hadoop MapReduce workloads and other application workloads are deployed on separate grid environments. Most open-source and commercial Hadoop MapReduce solutions lack the flexibility to support multiple, heterogeneous workloads on the same cluster. If you are deploying both compute and data intensive applications together, the actual savings opportunity may be greater than this analysis will show.",
+                        "To understand why Platform Symphony can deliver better application performance with less infrastructure, please review the IBM Platform Symphony Performance Whitepaper available at <a href=\"http://ibm.com/platformcomputing/products/symphony\">http://ibm.com/platformcomputing/products/symphony.</a>"
+                    ]
+                },
+                {
+                    "head" : "Hardware & Software Maintenance:",
+                    "paragraphs" : [
+                        "Hardware and software maintenance costs vary with the number of cluster nodes. IBM Platform Symphony helps you do more with less, thus reducing both of these costs year over year."
+                    ]
+                },
+                {
+                    "head" : "Power and Cooling",
+                    "paragraphs" : [
+                        "Power and cooling are major expenses in any data center. These costs also vary with the number of cluster nodes under management. We have not taken into account other Platform Symphony advantages including the ability to schedule tasks preferentially to the most cost-efficient nodes, so power efficiency may be even higher depending on how Platform Symphony is configured."
+                    ]
+                },
+                {
+                    "head" : "Grid Management Software",
+                    "paragraphs" : [
+                        "Grid Management software plays a critical role in managing clusters and making sure workloads are running efficiently. Having a workload manager that is able to reliably maximize cluster utilization is essential to containing costs.  IBM Platform Symphony is typically licensed on a perpetual basis. For this reason, IBM Platform Symphony is more expensive in the first year of this comparative analysis. Competitive grid managers may be licensed in a similar fashion or may be licensed based on an annual fee per node per year to license software. Actual pricing will vary depending on the grid manager selected, quantities of nodes licensed and any negotiated discounts."
+                    ]
+                },
+                {
+                    "head" : "Personnel Costs",
+                    "paragraphs" : [
+                        "Personnel costs are a major consideration with any IT project. In this model, for simplicity, we consider only administration related personnel costs. A key measure in estimating these costs is the number of servers that can be managed per administrator.  In the input to this model we assume that 100 servers can be managed by [value] administrators.  Once IBM Platform Symphony is deployed, administration becomes simpler.  Administrators can use the same grid manager for more applications, it becomes faster and easier to deploy and applications, and problems and support incidents are generally reduced.  ",
+                        "IBM Platform Symphony can generally lead to a [value] or more reduction in cluster administration time."
+                    ]
+                },
+                {
+                    "head" : "Other Opportunities for Savings",
+                    "paragraphs" : [
+                        "There are many additional ways that IBM Platform Symphony can help reduce the cost of your grid computing environment:",
+                        "IBM Platform Symphony is simply a better solution for managing your large scale grid for running distributed applications and Big Data analytics."
+                    ],
+                    "list_items" : [
+                        "Platform Symphony can help you consolidate costly applications silos by maximizing resource sharing while ensuring that application and departmental SLAs are met.",
+                        "Platform Symphony Multi Cluster provides full visibility to all global resources. This means that you may be able to leverage idle capacity in other geographies and avoid incremental infrastructure investments to support new projects",
+                        "By maximizing resource usage, and slowing the rate of data center growth, you can defer or avoid capital investments in data center expansion - a significant cost not considered in this model.",
+                        "Platform Symphony can help you speed the deployment of new applications thereby reducing the time to realize business benefits.",
+                        "By supporting multiple languages, operating systems and tools, and by providing rich capabilities aimed at making developers more productive, IBM Platform Symphony helps speed the deployment of new applications while reducing development and maintenance costs."
+                    ]
+                }
+            ]
+        },
+        {
+            "head" : "The Results",
+            "paragraphs" : [
+                "Based on these cost projections, IBM Platform Symphony can save [value] over three years."
+            ],
+            "figure1" : {
+            
+            },
+            "caption" : "Figure 1 - Opportunity for cost reduction with IBM Platform Symphony"
+        },
+        {
+            "head" : "Next Steps to Consider",
+            "list_items" : [
+                "Review the whitepapers and customer case studies to learn more about the benefits and value of IBM Platform Symphony at <a href=\"http://ibm.com/platformcomputing\">http://ibm.com/platformcomputing</a>",
+                "This is a simple tool intended to give you a quick indication of potential cost savings. Request than an IBM representative help you run a more detailed analysis to provide a business value assessment of managing your grid with IBM Platform Symphony."
+            ]
+
+        },
+        {
+            "head" : "Disclosures",
+            "paragraphs" : [
+                "The IBM Platform Symphony Cost Savings Estimate Tool (the \"Tool\") was developed for IBM to assist IBM customers and Business Partners to help estimate the potential savings over a 3-year period by selecting IBM Platform Symphony for your grid project.",
+                "The Tool is based on your input, as well as certain technical and financial assumptions based on IBM data and research and industry studies and observations, which are current as of Sept 19, 2012. The tool includes estimate assumptions regarding on potential gains in efficiency based on internal IBM studies and customer feedback. The Tool includes default values in some fields that are editable by you, which are examples only and are intended to be edited by you to reflect your own business data and projections. Default values may be based on IBM and IBM-funded third party industry studies. Estimate assumptions and default values used by the Tool may not be accurate or applicable to individual customers, and may vary based on a variety of factors, including, but not limited to, business conditions, competitive factors, your specific contract/license terms and individual customer configurations and conditions. The accuracy of your input may also affect the quality of the projections that the tool generates. Not all factors are considered in this Tool. To discuss your specific business situation, please contact IBM Corporation.",
+                "The tool is not a guarantee of current or future pricing. The Tool is provided for estimate purposes only and information provided by the Tool should not be used as a basis of financial planning or decision making. Estimates presented by the Tool are not a commitment, promise, or legal obligation to you regarding pricing, potential or actual financial projections or cost savings you may or may not achieve, and may not be incorporated into any contract. IBM is not responsible for the quality of any projections rendered by the Tool or any reports generated by the Tool. IBM is not responsible for the accuracy of the data contained in the Tool or any report, or how results are generated. Any reliance by you on the Tool and any results from the Tool is at your sole risk and will not create any liability or obligation for IBM.",
+                "IBM PROVIDES THE TOOL ON AN 'AS IS' BASIS ONLY, AND MAKES NO WARRANTIES OF ANY KIND, INCLUDING BUT NOT LIMITED TO WARRANTIES REGARDING ITS ACCURACY OR RELIABILITY, OR THE IMPLIED WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL IBM BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, SPECIAL OR OTHER CONSEQUENTIAL DAMAGES FOR ANY USE OF THE TOOL, OR FOR ANY LOST PROFITS, LOST SAVINGS, BUSINESS INTERRUPTION, OR OTHERWISE, EVEN IF WE ARE ADVISED OF THE POSSIBILITY OF SUCH DAMAGES."
+            ]
+        }
+
+    ]
+}

@@ -1,0 +1,472 @@
+{
+   "calculator" : {
+      "buttons" : [{
+         "id" : "calculator-btn",
+         "class" : "btn btn-primary btn-block",
+         "value" : "Show results",
+         "value_alt" : "Reset values"
+      }],
+      "inputs" : [
+         {
+            "header" : "Infrastructure",
+            "inputs" : [
+               {
+                    "type" : "text",
+                  "id" : "a",
+                  "label" : "Number of servers in the cluster",
+                  "defaultvalue" : "1000",
+                  "helptext" : "Enter the total number of servers required to meet capacity demands before deploying IBM Platform Symphony.",
+                  "title" : "Positive whole numbers allowed.",
+                  "pattern" : "^([1-9]\\d*|0*\\.\\d*[1-9]\\d*)$"
+               },
+               {
+                    "type" : "text",
+                  "id" : "b",
+                  "label" : "Average cost per server",
+                  "defaultvalue" : "",
+                  "helptext" : "The average cost per server reflects the initial purchase price for server hardware.",
+                  "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                  "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                  "unit" : {
+                    "prepend" : "$"
+                  },                  
+                  "inputs" : [
+                     {
+                        "type" : "text",
+                        "id" : "b1",
+                        "label" : "Capital costs per server",
+                        "defaultvalue" : "7000",
+                        "helptext" : "The average cost per server reflects the initial purchase price for server hardware only including internal storage.",
+                        "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                        "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                        "unit" : {
+                           "prepend" : "$"
+                        }
+                     },
+                     {
+                        "type" : "text",
+                        "id" : "b2",
+                        "label" : "Additional costs per server",
+                        "defaultvalue" : "1500",
+                        "helptext" : "Additional costs per server include items like rack hardware, network interface cards, network switches and cabling.",
+                        "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                        "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                        "unit" : {
+                           "prepend" : "$"
+                        }
+                     },
+                     {
+                        "type" : "text",
+                        "id" : "b3",
+                        "label" : "Annual licensing and support",
+                        "defaultvalue" : "500",
+                        "helptext" : "Annual support costs per server including hardware maintenance, software licensing costs operating systems and utilities. Do not include the cost of grid management software here.",
+                        "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                        "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                        "unit" : {
+                           "prepend" : "$"
+                        }
+                     }
+                  ]
+               },
+               {
+                    "type" : "text",
+                  "id" : "c",
+                  "label" : "Annual power costs per server",
+                  "defaultvalue" : "",
+                  "helptext" : "Annual power costs per server are a function of the average power consumption and power rates in your area. Edit this field to change assumptions related to power costs.",
+                  "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                  "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                  "unit" : {
+                     "prepend" : "$"
+                  },
+                  "inputs" : [
+                     {
+                        "type" : "text",
+                        "id" : "c1",
+                        "label" : "Average power consumption per server",
+                        "defaultvalue" : "700",
+                        "helptext" : "Enter the estimated average power consumption for a single server in watts. This refers to power required to power the server and any server accessories.",
+                        "title" : "Positive whole numbers allowed.",
+                        "pattern" : "^([1-9]\\d*|0*\\.\\d*[1-9]\\d*)$",
+                        "unit" : {
+                           "append" : "W"
+                        }
+                     },
+                     {
+                        "type" : "text",
+                        "id" : "c2",
+                        "label" : "Average cooling requirement per server",
+                        "defaultvalue" : "400",
+                        "helptext" : "Enter the estimated number of watts required to cool each server. Cooling costs vary with the number of servers and the per-server power consumption.",
+                        "title" : "Positive whole numbers allowed.",
+                        "pattern" : "^([1-9]\\d*|0*\\.\\d*[1-9]\\d*)$",
+                        "unit" : {
+                           "append" : "W"
+                        }
+                     },
+                     {
+                        "type" : "text",
+                        "id" : "c3",
+                        "label" : "Average power cost per KWhr",
+                        "defaultvalue" : ".12",
+                        "helptext" : "Power rates will vary depending on your locale. Estimate the average cost of electrical power per kilowatt hour.",
+                        "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                        "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                        "unit" : {
+                           "prepend" : "$"
+                        }
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "header" : "Application Environment",
+            "inputs" : [
+               {
+                "type" : "text",
+                  "id" : "d",
+                  "label" : "Number of Compute Intensive applications",
+                  "defaultvalue" : "3",
+                  "helptext" : "The effectiveness of resource sharing depends on the number of applications that will run on the cluster. Indicate the number of non-Hadoop MapReduce applications that will share the cluster.",
+                  "title" : "Positive whole numbers allowed.",
+                  "pattern" : "^([1-9]\\d*|0*\\.\\d*[1-9]\\d*)$"
+               },
+               {
+                "type" : "text",
+                  "id" : "e",
+                  "label" : "Number of big data / Hadoop applications",
+                  "defaultvalue" : "2",
+                  "helptext" : "Big data workloads have different performance characters than traditional compute-intensive workloads. Enter the number of Hadoop or big data applications that will share the cluster here.",
+                  "title" : "Positive whole numbers allowed.",
+                  "pattern" : "^([1-9]\\d*|0*\\.\\d*[1-9]\\d*)$"
+               }
+            ]
+         },
+        {
+            "header" : "Additional Application Detail",
+            "inputs" : [
+                {
+                    "type" : "text",
+                    "id" : "f1",
+                    "label" : "Percentage of jobs with short-running tasks",
+                    "defaultvalue" : "40",
+                    "helptext" : "Platform Symphony is particularly adept at scheduling short running tasks. Other grid managers can be less efficient at this. The value entered here is used to estimate the mix between short and long running calculations.",
+                    "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                    "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                    "unit" : {
+                        "append" : "%"
+                    }
+                },
+                {
+                    "type" : "text",
+                    "id" : "f2",
+                    "label" : "Efficiency gain for short-running tasks",
+                    "defaultvalue" : "30",
+                    "helptext" : "Estimate the performance gain that Symphony will provide when running short running tasks. Gains related to lower latency and resource sharing can be dramatic for both SOA workloads and MapReduce workloads.",
+                    "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                    "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                    "unit" : {
+                        "append" : "%"
+                    }
+                },
+                {
+                    "type" : "text",
+                    "id" : "f3",
+                    "label" : "Efficiency gain for long-running tasks",
+                    "defaultvalue" : "10",
+                    "helptext" : "Estimate the performance gain that Symphony will provide for applications with long running tasks. Performance gains for longer running tasks will depend more on dynamic resource sharing than low-latency scheduling.",
+                    "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                    "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                    "unit" : {
+                        "append" : "%"
+                    }
+                }
+            ]
+        },
+        {
+            "header" : "Personnel",
+            "inputs" : [
+                {
+                    "type" : "text",
+                    "id" : "g",
+                    "label" : "System administrators",
+                    "defaultvalue" : "",
+                    "helptext" : "Edit this field to provide assumptions around the number of system administrators required to operate the cluster before deploying IBM Platform Symphony.",
+                    "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                    "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                    "inputs" : [
+                        {
+                            "type" : "text",
+                            "id" : "g1",
+                            "label" : "Number of Administrators",
+                            "defaultvalue" : "",
+                            "helptext" : "This field is estimated for you depending on the size of the cluster. You can over-ride this value to reflect your own assumptions.",
+                            "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                            "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$"
+                        },
+                        {
+                            "type" : "text",
+                            "id" : "g2",
+                            "label" : "Annual cost per administrator",
+                            "defaultvalue" : "80000",
+                            "helptext" : "Estimate the annual burden cost to the organization per system administrator. This figure includes salary, benefits and occupancy costs.",
+                            "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                            "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                            "unit" : {
+                                "prepend" : "$"
+                            }
+                        },
+                        {
+                            "type" : "text",
+                            "id" : "g3",
+                            "label" : "Administrators per 100 managed servers",
+                            "defaultvalue" : ".5",
+                            "helptext" : "Depending on the complexity of the environment, you may need more or less system administration staff. Enter the estimated number of administrators required for each 100 servers.",
+                            "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                            "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$"
+                        }
+                    ]
+                }
+            ]
+        },
+         {
+            "header" : "Business Assumptions",
+            "inputs" : [
+               {
+                "type" : "text",
+                  "id" : "h",
+                  "label" : "Cluster growth rate per year",
+                  "defaultvalue" : "15",
+                  "helptext" : "Clusters generally grow as data volumes and analytic requirements increase year over year. Estimated the natural rate of growth of your cluster before Platform Symphony is deployed.",
+                  "title" : "Positive numbers with 1 or 2 decimal places allowed.",
+                  "pattern" : "^([1-9]\\d*(\\.\\d+)?|0*\\.\\d*[1-9]\\d*)$",
+                  "unit" : {
+                     "append" : "%"
+                  }
+               }
+            ]
+         }
+      ]
+   },
+   "assumptions" : {
+      "cost_per_node_for_comp_grid_mgmt_sw" : "1000",
+      "symphony_perpetual_cost_per_host" : "1800",
+      "symphony_ann_support_per_host" : "450",
+      "assumed_gain_admin_eff_after_symphony" : ".3",
+      "estimated_labor_inflation_per_year" : ".03",
+      "capital_depreciation_period" : "3"
+   },
+   "text_content" : {
+      "head" : "IBM Platform Symphony",
+      "subhead" : "Total Cost of Ownership Calculator",
+      "summary" : "IBM Platform Symphony is an enterprise-class grid manager for running distributed application services and big data analytics on a scalable, shared, heterogeneous grid.  By taking advantage of Symphony’s low-latency scheduling and resource sharing capabilities, clients can increase performance and analytic capacity while realizing a reduced total cost of ownership.",
+      "alert" : "Answer the questions above to see your results!",      
+      "chart" : {
+            "block1" : {
+                "bold" : "IBM Platform Symphony ",
+                "regular" : "can provide significant savings for organizations deploying distributed applications and big data analytic workloads. Symphony is usually more cost efficient for the following reasons:"
+            },
+            "list_items" : [
+                "The low-latency scheduling and middleware processes tasks faster meaning that less hardware is required to meet performance goals",
+                "Symphony’s sophisticated resource sharing policies enable multiple departments, applications and users to share a common grid reducing the amount of infrastructure investment required",
+                "Because Symphony can drive much high resource utilization than competing grid managers, the rate of cluster growth can be slowed, further reducing infrastructure, power and facilities costs."
+            ],
+            "block2" : "The results of our high-level analysis are shown below. You can request that a more detailed report be sent to you by e-mail.",
+            "savings" : "Platform Symphony saves [value] over three years."
+      }
+   },
+   "charts" : {
+        "table1" : {
+            "title" : "Table 1 - Estimated 3 year TCO for grid computing deployment with IBM Platform Symphony",
+            "col_headers" : [
+                "Annual Costs",
+                "End of Year 1",
+                "End of Year 2",
+                "End of Year 3",
+                "Total"
+            ],
+            "row_headers" : [
+                "Cost of Infrastructure",
+                "HW + SW Maintenance",
+                "Power and Cooling",
+                "Grid Management Software",
+                "Personnel Costs",
+                "Total Costs"
+            ]
+        },
+        "table2" : {
+            "title" : "Table 2 -Three year TCO estimate reflecting savings with IBM Platform Symphony",
+            "col_headers" : [
+                "Annual Costs",
+                "EOY 1",
+                "EOY 2",
+                "EOY 3",
+                "Total"
+            ],
+            "row_headers" : [
+                "Cost of Infrastructure",
+                "HW + SW Maintenance",
+                "Power and Cooling",
+                "Grid Management Software",
+                "Personnel Costs",
+                "Total Costs"
+            ]
+        },
+        "table3" : {
+            "pdf_title" : "Table 3 - Cumulative costs with and without Platform Symphony",
+            "title" : "Cumulative costs with and without Platform Symphony",
+            "col_headers" : [
+                "EOY 1",
+                "EOY 2",
+                "EOY 3"
+            ],
+            "row_headers" : [
+                "Other Grid Manager",
+                "IBM Platform Symphony",
+                "IBM Platform Symphony Savings"
+            ]
+        },
+        "figure1" : {
+            "title" : "IBM Symphony TCO Savings (%)",
+            "legend" : "Savings",
+            "col_headers" : [
+                "EOY 1",
+                "EOY 2",
+                "EOY 3"
+            ]
+        }
+   },
+   "demographics" : {
+      "header" : "Tell Us About Your Business",
+      "inputs" : [
+         {
+            "type" : "select",
+            "id" : "j",
+            "label" : "Which best describes your industry?",
+            "defaultvalue" : "0",
+            "options" : [
+               "Select an industry",
+               "Financial Services or Insurance",
+               "Government, Defense",
+               "Biotechnology or Life Sciences",
+               "Aerospace, Automotive",
+               "Other Manufacturing",
+               "Telecommunications",
+               "Media, Broadcasting, Entertainment",
+               "On-line service provider",
+               "IT Services",
+               "Other"
+            ]
+         },
+         {
+            "type" : "select",
+            "id" : "k",
+            "label" : "Please tell us how many employees there are in your organization worldwide",
+            "defaultvalue" : "0",
+            "options" : [
+               "Select a range",
+               "1-9",
+               "10-99",
+               "100-499",
+               "500-999",
+               "1000-4999",
+               "5000+"
+            ]
+         },
+         {
+            "type" : "select",
+            "id" : "l",
+            "label" : "Please select your country or region",
+            "defaultvalue" : "0",
+            "options" : [
+               "Select Country",
+               "USA or Canada",
+               "Central or South America",
+               "Europe",
+               "Middle East or Africa",
+               "China",
+               "Japan",
+               "India",
+               "Other Asian countries"
+            ]
+         }
+      ]
+   },
+	"email" : {
+		"form" : {
+			"header" : "Email My Results",
+			"buttons" : [{
+			  "id" : "email-form-btn",
+			  "class" : "btn btn-primary btn-block",
+			  "data_toggle" : "modal",
+			  "href" : "#myModal",
+			  "value" : "Send me the results!"
+			},
+			{
+			  "id" : "send-email-btn",
+			  "class" : "btn btn-primary",
+			  "value" : "Send"
+			}],
+			"inputs" : [
+                {
+                    "type" : "text",
+                    "id" : "m",
+                    "label" : "Name",
+                    "unit" : {
+                        "append" : "*"
+                    }
+                },
+                {
+                    "type" : "text",
+                    "id" : "n",
+                    "label" : "Company"
+                },
+                {
+                    "type" : "text",
+                    "id" : "o",
+                    "label" : "Phone Number"
+                },
+                {
+                    "type" : "email",
+                    "id" : "p",
+                    "label" : "Email",
+                    "pattern" : "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$",
+                    "unit" : {
+                        "append" : "*"
+                    }
+                },
+                {
+                    "type" : "check",
+                    "id" : "q",
+                    "label" : "IBM may contact me at the e-mail address above."
+                }
+			],
+            "success" : {
+                "text1" : "Thank you for using the ",
+                "bold" : "IBM Platform Symphony ",
+                "text2" : "Total Cost of Ownership Calculator.  You should receive an email shortly with your detailed results."
+            },
+            "form_error" : "Please fill out the required fields before sending your information.",
+            "post_error" : "There was an error sending your information.  Please try again later."
+		},
+		"email_content" : {
+			"cc_email" : "gsissions@ibm.com",
+			"header_subject" : "IBM Platform Symphony TCO Report",
+			"header_from" : "donotreply@ibmplatformcomputing.com",
+			"rep_body" : [
+                "A user has requested to be contacted by IBM for a follow up on their IBM Platform Symphony Total Cost of Ownership Calculator report.",
+                "The users information is listed below.",
+                "Received Submission From:",
+    			"User's generated PDF"
+			],
+			"user_body" : [
+                "Thank you for using the IBM Platform Symphony Total Cost of Ownership Calculator.  ",
+                "Below is a link to a report generated from your choices and selections made using the IBM Platform Symphony Total Cost of Ownership Calculator.  ",
+                "If you requested an IBM representative to contact you, one will follow up with you shortly.",
+    			"Click here to view your detailed report."                
+			]
+		}
+   }
+}

@@ -1,0 +1,19 @@
+This uses FPDI which is an extension of FPDF that is necessary to support non-Western fonts.  The fpdf and FPDI-1.4.1 folders should be included in any PDF generating projects.
+
+I always use these three include statments:
+
+require_once('fpdf/alpha_fpdf.php');
+require_once('FPDI-1.4.1/fpdi.php');
+require_once('./PDFCreator.php');
+set_include_path('font');
+
+The PDFCreator is an extension I made to FPDI.  Not necessary, but I made some modifications that I thought made the layout a little simpler.  The other requires and includes are absolutely necessary.
+
+Fonts - THIS IS IMPORTANT!  All fonts should be ttf format and placed in the following folder:
+
+fpdf/font/unifont/
+
+When called by the AddFont method the first time (i.e. $pdf->AddFont("Helvetica","","Helvetic.TTF",true)), a php folder is created in the unifont folder with the current server or localhost path.  When you put the fonts on a new server ONLY include the ttfonts.php file.  DON'T load the other PHP files or you'll start getting errors.
+
+
+ header('Access-Control-Allow-Origin: *');  

@@ -1,0 +1,367 @@
+/*   Bootstrap Overrides   */
+.popover{
+    margin-top: -8px;
+    font-size: 11px;
+    line-height: 14px;
+    color: rgb(183, 183, 183);
+    border:2px solid #fff;
+}
+
+.popover-inner{
+    background: rgb(26, 23, 23);
+}
+
+.popover.top .arrow{
+    border-width:11px 11px 0;
+}
+
+.popover.top .arrow:after{
+    border-width: 0;
+}
+
+.popover-content{
+    padding: 9px;
+}
+
+.alert{
+    padding: 8px 14px;
+}
+
+.alert p{
+    margin: 0;
+}
+
+body{
+    background-color:#4d4d4d;
+    background-image: -webkit-gradient(linear, left top, right top, from(#c9c9c9), color-stop(0.5, #ffffff), to(#c9c9c9)); /* Safari 4-5, Chrome 1-9 */ 
+    background-image: -webkit-linear-gradient(left, #c9c9c9 0, #ffffff 30%, #ffffff 70%, #c9c9c9 100%);                /* Safari 5.1+, Chrome 10+ */
+    background-image: -moz-linear-gradient(left, #c9c9c9 0, #ffffff 30%, #ffffff 70%, #c9c9c9 100%);                   /* Firefox 3.6+ */
+    background-image: -ms-linear-gradient(left, #c9c9c9 0, #ffffff 30%, #ffffff 70%, #c9c9c9 100%);                    /* IE 10 */
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9c9c9', endColorstr='#ffffff', GradientType=0);  /* IE < 10 */
+    background-image: -o-linear-gradient(left, #c9c9c9 0, #ffffff 30%, #ffffff 70%, #c9c9c9 100%);                     /* Opera 11.10+ */
+}
+
+legend{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.demographics select{
+    padding: 4px 6px;
+    width: 405px;
+}
+
+fieldset{
+    margin-bottom: 16px;
+}
+
+h4{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+li{
+    margin-bottom: 9px;
+}
+
+#divheader{
+    background-color:#4d4d4d;
+    background-image:-moz-linear-gradient(top, #4d4d4d, #000000);
+    background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#4d4d4d), to(#000000));
+    background-image:-webkit-linear-gradient(top, #4d4d4d, #000000);
+    background-image:-o-linear-gradient(top, #4d4d4d, #000000);
+    background-image:linear-gradient(to bottom, #4d4d4d, #000000);
+    background-repeat:repeat-x;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4d4d', endColorstr='#000000', GradientType=0);
+}
+
+#divheader .container{
+    padding: 18px 0;
+    width: 870px;
+    background: url("../img/logo.png") 15px 50% no-repeat;
+}
+
+#divheader h1,
+#divheader h2{
+    margin: 0 0 0 120px;
+    color: rgb(255, 255, 255);
+}
+
+#divheader h1{
+    font-size: 22px;
+    line-height: 22px;
+}
+
+#divheader h2{
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 300;
+}
+
+#divfooter {
+    margin: 35px 15px 0 15px;
+    padding: 12px 0 0 0;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+
+#results .info-block{
+    margin-bottom: 32px;
+}
+
+.container-wrapper-meta{
+    background: url("../img/illustrationLeft.png") 0 70px no-repeat;
+}
+
+.container-wrapper-meta-inner{
+    background: url("../img/illustrationRight.png") bottom right no-repeat;
+}
+
+.container-wrapper{
+    background: url("../img/background_tile.png") 0 0 repeat;
+}
+
+.container{
+    position: relative;
+    padding: 20px 45px 0 45px;
+    width: 870px;
+}
+
+
+header .container{
+    padding: 18px 0;
+    width: 870px;
+    background: url("../img/logo.png") 15px 50% no-repeat;
+}
+
+header h1,
+header h2{
+    margin: 0 0 0 120px;
+    color: rgb(255, 255, 255);
+}
+
+header h1{
+    font-size: 22px;
+    line-height: 22px;
+}
+
+header h2{
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 300;
+}
+
+.container .span5{
+    padding: 0 15px;
+    width: 405px;
+    xbackground: none repeat scroll 0 0 rgba(234, 119, 149, 0.3);
+}
+
+.demographics .invalid,
+.form-horizontal .control-group .controls input.invalid{
+    border-color:rgb(255, 0, 0);
+    outline:0;
+    outline:thin dotted \9;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(255, 0, 0, 0.4);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(255, 0, 0, 0.4);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(255, 0, 0, 0.4);
+}
+
+.help-block,
+.wrapper{
+    display:none;
+}
+
+.popover-title{
+    padding: 0;
+    border-bottom: none;
+}
+
+#calculator{
+    position: absolute;
+    left: 480px;
+}
+
+#calculator .form-horizontal .control-group,
+legend + .control-group{
+    margin: 5px 0;
+}
+
+#calculator .form-horizontal .control-group .control-label{
+    margin: 0;
+    padding: 0;
+	width: 270px;
+	line-height: 20px;
+	text-align: left;
+}
+
+#calculator .form-horizontal .control-group .control-label .icon-info-sign{
+    margin-right: 3px;
+    vertical-align: top;
+}
+
+#calculator .form-horizontal .control-group .controls{
+	margin-left: 276px;
+}
+
+#calculator .form-horizontal .control-group .controls input{
+    margin-left: 22px;
+    width: 63px;
+    text-align: right;
+}
+
+#calculator .form-horizontal .control-group .controls .input-prepend input{
+    margin-left: 0;
+    border-left: none;
+}
+
+#calculator .form-horizontal .control-group .controls .input-append input{
+    border-right: none;
+}
+
+#calculator .form-horizontal .well .control-group .control-label{
+    width: 256px;
+}
+
+#calculator .form-horizontal .well .control-group .controls{
+    margin-left: 266px;
+}
+
+.btn-primary,
+.form-horizontal .control-group .control-label .info-wrapper,
+.form-horizontal .control-group .controls .pencil-wrapper{
+    background-color:#a8bcd4;
+    background-image:-moz-linear-gradient(to bottom, #a8bcd4 0%, #819dc1 100%);
+    background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#a8bcd4), to(#819dc1));
+    background-image:-webkit-linear-gradient(top, #a8bcd4, #819dc1);
+    background-image:-o-linear-gradient(top, #a8bcd4, #819dc1);
+    background-image:linear-gradient(to bottom, #a8bcd4, #819dc1);
+    background-repeat:repeat-x;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8bcd4', endColorstr='#819dc1', GradientType=0);
+
+}
+
+.btn-primary:hover,
+.form-horizontal .control-group .control-label .info-wrapper:hover,
+.form-horizontal .control-group .controls .pencil-wrapper:hover{
+    background-color:#a8bcd4;
+    background-image:-moz-linear-gradient(to bottom, #819dc1 0%, #a8bcd4 100%);
+    background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#a8bcd4), to(#000000));
+    background-image:-webkit-linear-gradient(top, #819dc1, #a8bcd4);
+    background-image:-o-linear-gradient(top, #819dc1, #a8bcd4);
+    background-image:linear-gradient(to bottom, #819dc1, #a8bcd4);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#819dc1', endColorstr='#a8bcd4', GradientType=0);
+}
+
+#myModal:focus,
+#email-form-btn:focus{
+    outline:none;
+}
+
+.form-horizontal .control-group .controls .pencil-wrapper{
+    display: inline-block;
+    margin-left: 2px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid rgb(121, 143, 172);
+    vertical-align: middle;
+    line-height: 16px;
+}
+
+.form-horizontal .control-group .controls .icon-pencil{
+    height: 15px;
+    width: 16px;
+    background-position: 1px -72px;
+}
+
+.form-horizontal .control-group .control-label .info-wrapper{
+    display: inline-block;
+    margin: 0 0 0 4px;
+    height: 13px;
+    width: 13px;
+    border: 1px solid rgb(121, 143, 172);
+    vertical-align: text-top;
+}
+
+.form-horizontal .control-group .control-label .info-wrapper .info-icon{
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url("../img/infoButton.png") 0 0 no-repeat;
+}
+
+.form-horizontal .control-group .controls .add-on{
+    margin-right: 0;
+    border: 1px solid #707070;
+}
+
+.form-horizontal .control-group .controls .input-prepend .add-on{
+    xbackground: rgba(255, 0, 0, .7);
+    padding: 2px 4px 2px 2px;
+    border-right: none;
+}
+
+.form-horizontal .control-group .controls .input-append .add-on{
+    padding: 2px;
+}
+
+#calculator .form-horizontal .well #c1.control-group .control-label,
+#calculator .form-horizontal .well #c2.control-group .control-label{
+    width: 251px;
+}
+
+#calculator .form-horizontal #c1.control-group .controls,
+#calculator .form-horizontal #c2.control-group .controls{
+    margin-left: 261px;
+}
+
+#calculator .form-horizontal #c1.control-group .controls .input-append .add-on,
+#calculator .form-horizontal #c2.control-group .controls .input-append .add-on{
+    padding: 2px 4px;
+}
+
+#results-table-summary-block{
+    margin-bottom: 20px;
+}
+
+#results-table-summary-block h4{
+    margin: 0;
+    padding: 6px 0;
+    border: 2px solid #16AF4B;
+    background: #006062;
+    color: #fff;
+    text-align: center;
+}
+
+#results-table-summary-block h4 strong{
+    font-size: 18px;
+    color: #A1CD3A;
+}
+
+#results-table-block .google-visualization-table-table .google-visualization-table-tr-head{
+    font-size: 12px;
+}
+
+#results-table-block .google-visualization-table-table .google-visualization-table-tr-even,
+#results-table-block .google-visualization-table-table .google-visualization-table-tr-over,
+#results-table-block .google-visualization-table-table .google-visualization-table-tr-sel{
+    font-size: 11px;
+}
+
+#results-graph-block{
+    xborder: 1px solid #eee;
+}
+
+.email.form-horizontal .control-group .controls .add-on{
+    background: none;
+    border: none;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.email #q .controls{
+    margin-left: 73px;
+}

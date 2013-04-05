@@ -1,0 +1,118 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src='https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1","packages":["corechart","table"]}]}'></script>
+</head>
+<body>
+    <div class="container-wrapper-meta">
+        <div class="container-wrapper-meta-inner">
+
+
+            <div class="container-wrapper">
+                <div id="divheader">
+                    <div class="container page-head"></div>        
+                </div>
+        
+                <div class="container">
+                    <div class="row">
+                        <div id="summary" class="span5">
+                            <div class="info-block">
+                                <div id="summary-content-block"></div>
+                            </div>
+                            <div class="info-block">
+                                <div id="demographics-form-block"></div>
+                                <div id="demographics-error-block"></div>
+                            </div>
+                        </div>
+        
+                        <div id="results" class="span5">
+                            <div class="info-block">
+                                <div id="results-content-block">
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div id="results-table-summary-block"></div>
+                                <div id="results-table-block"></div>
+                            </div>
+                            <div class="info-block">
+                                <div id="results-graph-block"></div>
+                            </div>
+                            <div class="info-block">
+                                <div id="results-email-block"></div>
+                            </div>
+                            
+                        </div>
+        
+                        <div id="calculator" class="span5"></div>
+                    </div>
+        
+                    <div class="modal hide fade" id="myModal" aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" data-backdrop="true" style="display: none;">
+                        <div class="modal-header">
+                          <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                          <h3 id="myModalLabel"></h3>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+                        
+            </div>
+        
+
+
+        </div>
+    </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/calculation.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/util.min.js"></script>
+    <script type="text/javascript">
+        var _ASSUMPTIONS_, _CHARTS_, _CONTENT_, _PDF_, _CALCULATOR_, _DEMOGRAPHICS_, _EMAIL_;
+
+        $(document).ready(function(){
+    		$.when(
+    			$.ajax({url : "js/defaults.json", dataType : "json"})
+    		).then(function(data){
+    			setGlobals(data);
+    			createForms();
+    			$("#results").css('visibility', 'hidden');
+    			$("#results").fadeTo(0, 0);
+    			injectContent();
+    			
+    			//draw google table & chart
+    			drawGoogle( googleTable(), "table", "results-table-block");
+    			drawGoogle( googleLineChart(), "line", "results-graph-block");
+    			$("#results-graph-block").css("border", "1px solid #eee");
+    		}).fail(function(data){});
+    
+    		$.when(
+    			$.ajax({url : "js/pdf.json", dataType : "json"})
+    		).then(function(data){
+    			_PDF_ = data;
+    		}).fail(function(data){});
+    		
+    		modalReset();
+        });        
+    </script>
+
+</body>
+</html>
